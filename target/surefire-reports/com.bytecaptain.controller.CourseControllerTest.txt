@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.bytecaptain.controller.CourseControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 5.208 s <<< FAILURE! - in com.bytecaptain.controller.CourseControllerTest
+updateCourse  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalArgumentException: Could not find class [CourseController]
+Caused by: java.lang.ClassNotFoundException: CourseController
+
+deleteCourse  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalArgumentException: Could not find class [CourseController]
+Caused by: java.lang.ClassNotFoundException: CourseController
+
+getCourse  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalArgumentException: Could not find class [CourseController]
+Caused by: java.lang.ClassNotFoundException: CourseController
+
+createCourse  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalArgumentException: Could not find class [CourseController]
+Caused by: java.lang.ClassNotFoundException: CourseController
+

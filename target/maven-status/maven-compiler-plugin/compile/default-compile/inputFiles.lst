@@ -1,0 +1,10 @@
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/repository/CourseRepository.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/controller/CourseController.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/model/Course.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/controller/BasicAuthenticationController.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/security/AuthenticationBean.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/exception/CourseNotFoundException.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/security/SpringSecurityConfigurationBasicAuth.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/service/impl/CourseServiceImpl.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/CourseApplication.java
+/Users/caihualiu/Documents/workspace-byteCaptain/bytecaptain-course-app-api/src/main/java/com/bytecaptain/service/CourseService.java

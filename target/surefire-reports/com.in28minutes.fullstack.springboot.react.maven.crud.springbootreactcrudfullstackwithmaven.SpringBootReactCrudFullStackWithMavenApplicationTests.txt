@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.in28minutes.fullstack.springboot.react.maven.crud.springbootreactcrudfullstackwithmaven.SpringBootReactCrudFullStackWithMavenApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.105 s <<< FAILURE! - in com.in28minutes.fullstack.springboot.react.maven.crud.springbootreactcrudfullstackwithmaven.SpringBootReactCrudFullStackWithMavenApplicationTests
+initializationError(com.in28minutes.fullstack.springboot.react.maven.crud.springbootreactcrudfullstackwithmaven.SpringBootReactCrudFullStackWithMavenApplicationTests)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+
