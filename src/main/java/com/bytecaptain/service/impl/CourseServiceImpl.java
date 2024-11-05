@@ -36,6 +36,14 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
+	public List<Course> getAllCourse(String username, String searchQuery){
+		if(searchQuery == null || searchQuery.isEmpty()) {
+			return courseRepository.findByUsername(username); // If there is no key words, return all the courses.
+		}
+		return courseRepository.findByUsernameAndDescriptionContaining(username, searchQuery);
+	}
+	
+	@Override
 	public void deleteCourse(String username, long id) {
 		courseRepository.deleteById(id);
 	}

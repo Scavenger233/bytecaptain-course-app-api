@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -42,7 +43,16 @@ public class CourseController {
 		Course course = courseService.getCourse(username, id);
 		return course;
 	}
-
+	
+	@GetMapping("/instructors/{username}/courses/search")
+	public List<Course> getAllCourses(
+			@PathVariable String username,
+			@RequestParam(required = false) String searchQuery) {
+		
+		// Deploy service method and pass searchQuery parameter
+		return courseService.getAllCourse(username, searchQuery);
+	}
+	
 	@DeleteMapping("/instructors/{username}/courses/{id}")
 	public ResponseEntity<Void> deleteCourse(@PathVariable String username, @PathVariable long id) {
 
