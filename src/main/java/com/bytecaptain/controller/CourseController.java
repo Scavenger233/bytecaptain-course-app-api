@@ -30,11 +30,11 @@ public class CourseController {
 	private CourseService courseService;
 
 	@GetMapping("/instructors/{username}/courses")
-	public List<Course> getAllCourses(@PathVariable String username) {
-		
-		List<Course> courses = courseService.getAllCourses(username);
-		
-		return courses;
+	public List<Course> getAllCourses(
+	        @PathVariable String username, 
+	        @RequestParam(required = false) String searchQuery) {
+	    
+	      return courseService.getAllCourses(username, searchQuery);
 	}
 
 	@GetMapping("/instructors/{username}/courses/{id}")
@@ -42,15 +42,6 @@ public class CourseController {
 		
 		Course course = courseService.getCourse(username, id);
 		return course;
-	}
-	
-	@GetMapping("/instructors/{username}/courses/search")
-	public List<Course> getAllCourses(
-			@PathVariable String username,
-			@RequestParam(required = false) String searchQuery) {
-		
-		// Deploy service method and pass searchQuery parameter
-		return courseService.getAllCourse(username, searchQuery);
 	}
 	
 	@DeleteMapping("/instructors/{username}/courses/{id}")

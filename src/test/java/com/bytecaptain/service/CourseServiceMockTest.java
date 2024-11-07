@@ -39,7 +39,7 @@ public class CourseServiceMockTest {
                 new Course(10002, "bytecaptain", "Learn Spring Boot"));
     	
     	when(courseRepository.findAll()).thenReturn(Courses);
-		assertEquals(Courses, courseService.getAllCourses("in28minutes"));
+		assertEquals(Courses, courseService.getAllCourses("in28minutes", "test"));
     }
     
     @Test

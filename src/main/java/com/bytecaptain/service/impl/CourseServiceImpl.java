@@ -21,26 +21,18 @@ public class CourseServiceImpl implements CourseService {
     private CourseRepository courseRepository;
 
    	@Override
-	public List<Course> getAllCourses(String username) {
-   		//TODO maybe next for rest api development
-   		logger.trace("Entered getAllCourses method");
-   		
-   		List<Course> courses = courseRepository.findAll();
-
-		return courses;
-	}
+    public List<Course> getAllCourses(String username, String searchQuery) {
+        if (searchQuery == null || searchQuery.isEmpty()) {
+            // If there is no search query, return all courses
+            return courseRepository.findByUsername(username);
+        }
+        // If there is a query, return search results
+        return courseRepository.findByUsernameOrDescriptionContaining(searchQuery);
+    }
 
 	@Override
 	public Course getCourse(String username, long id) {
 		return courseRepository.findById(id).orElseThrow(() -> new CourseNotFoundException(id));
-	}
-
-	@Override
-	public List<Course> getAllCourse(String username, String searchQuery){
-		if(searchQuery == null || searchQuery.isEmpty()) {
-			return courseRepository.findByUsername(username); // If there is no key words, return all the courses.
-		}
-		return courseRepository.findByUsernameAndDescriptionContaining(username, searchQuery);
 	}
 	
 	@Override

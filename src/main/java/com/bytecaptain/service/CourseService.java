@@ -6,10 +6,8 @@ import com.bytecaptain.model.Course;
 
 public interface CourseService {
 
-	List<Course> getAllCourses(String username);
-	
-	// Add new search function
-	List<Course> getAllCourse(String username, String searchQuery);
+	//Keep search function in getAllCourses method
+	List<Course> getAllCourses(String username, String searchQuery);
 	
 	Course getCourse(String username, long id);
 	
