@@ -57,9 +57,8 @@ public class CourseController {
 	@PutMapping("/instructors/{username}/courses/{id}")
 	public ResponseEntity<Course> updateCourse(@PathVariable String username, @PathVariable long id,
 			@RequestBody Course course) {
-
+		course.setId(id); //make sure course id is syncing
 		course.setUsername(username);
-		
 		Course courseUpdated = courseService.updateCourse(username, id, course);
 		
 		ResponseEntity<Course> responseEntity = new ResponseEntity<Course>(courseUpdated, HttpStatus.OK);
